@@ -21,22 +21,13 @@ overflow-x:hidden;
 background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#ff758c,#ff7eb3);
 background-size:400% 400%;
 animation:gradientBG 12s ease infinite;
-
 }
 
 @keyframes gradientBG{
 
-0%{
-background-position:0% 50%;
-}
-
-50%{
-background-position:100% 50%;
-}
-
-100%{
-background-position:0% 50%;
-}
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
 
 }
 
@@ -98,11 +89,51 @@ opacity:0;
 
 }
 
+/* نجوم كيوت في الخلفية */
+
+.stars{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+overflow:hidden;
+}
+
+.star{
+position:absolute;
+color:white;
+font-size:12px;
+animation:twinkle 4s linear forwards;
+opacity:0.8;
+}
+
+@keyframes twinkle{
+
+0%{
+transform:translateY(0);
+opacity:0;
+}
+
+50%{
+opacity:1;
+}
+
+100%{
+transform:translateY(-100vh);
+opacity:0;
+}
+
+}
+
 </style>
 
 </head>
 
 <body>
+
+<div class="stars"></div>
 
 <section id="funny">
 
@@ -116,7 +147,7 @@ opacity:0;
 بعد تحقيق طويل اكتشفنت أن المجرم هي
 </p>
 
-<h2>انتي </h2>
+<h2>انتي</h2>
 
 <p>
 عقوبتك هي
@@ -144,11 +175,11 @@ opacity:0;
 </p>
 
 <p style="font-size:20px">
-كل عام وأنتي أجمل ما جا في حياتي🤍
- sorry about everything baby girl 🤍
+كل عام وأنتي أجمل ما جا في حياتي 🤍  
+sorry about everything baby girl 🤍
 </p>
 
-<h2>أحبك-Mo</h2>
+<h2>أحبك - Mo</h2>
 
 <div class="gallery">
 
@@ -188,6 +219,29 @@ heart.remove();
 },1000);
 
 });
+
+/* نجوم كيوت تتحرك */
+
+function createStar(){
+
+const star=document.createElement("div");
+
+star.className="star";
+star.innerHTML="✨";
+
+star.style.left=Math.random()*100+"vw";
+star.style.bottom="-20px";
+star.style.fontSize=(Math.random()*10+10)+"px";
+
+document.querySelector(".stars").appendChild(star);
+
+setTimeout(()=>{
+star.remove();
+},4000);
+
+}
+
+setInterval(createStar,300);
 
 </script>
 
