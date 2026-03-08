@@ -13,9 +13,31 @@ body{
 margin:0;
 font-family:Arial;
 text-align:center;
-background:linear-gradient(135deg,#ff9a9e,#fad0c4);
 color:#333;
 overflow-x:hidden;
+
+/* الخلفية المتحركة */
+
+background:linear-gradient(-45deg,#ff9a9e,#fad0c4,#ff758c,#ff7eb3);
+background-size:400% 400%;
+animation:gradientBG 12s ease infinite;
+
+}
+
+@keyframes gradientBG{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
 }
 
 section{
@@ -37,7 +59,6 @@ background:white;
 }
 
 .romantic{
-background:linear-gradient(135deg,#ff758c,#ff7eb3);
 color:white;
 }
 
@@ -83,8 +104,6 @@ opacity:0;
 
 <body>
 
-<!-- البداية المضحكة -->
-
 <section id="funny">
 
 <h1>🚨 تنبيه مهم 🚨</h1>
@@ -109,9 +128,6 @@ opacity:0;
 
 </section>
 
-
-<!-- الجزء الرومانسي -->
-
 <section id="romantic" class="romantic" style="display:none">
 
 <h1>🌹 يوم المرأة العالمي 🌹</h1>
@@ -124,16 +140,15 @@ opacity:0;
 <p style="max-width:600px">
 أنتي مو بس امرأة بالنسبة لي  
 أنتي الراحة، الضحكة، والأمان.  
-وجودك في حياتي يخلي كل يوم أجمل.
+وجودك في حياتي يخلي كل يوم أجمل
 </p>
 
 <p style="font-size:20px">
 كل عام وأنتي أجمل ما جا في حياتي🤍
-  sorry about everything baby girl
- 
+ sorry about everything baby girl 🤍
 </p>
 
-<h2>Mo - أحبك</h2>
+<h2>أحبك-Mo</h2>
 
 <div class="gallery">
 
